@@ -1,0 +1,36 @@
+/* ANCHOR Постоянные клиенты */
+.customers .item {
+    width: 170px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border: 1px solid $border-logo-color;
+    border-radius: 4px;
+  }
+  
+  .customers .item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .customers .item:hover,
+  .customers .item:focus {
+    cursor: pointer;
+    border-color: $accent-color;
+  }
+  
+  .customers .logo-icon {
+    fill: $customers-logo-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .customers .item:hover .logo-icon,
+  .customers .item:focus .logo-icon {
+    fill: $accent-color;
+  }
+  
+  .customers .item {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
