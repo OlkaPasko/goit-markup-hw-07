@@ -1,18 +1,23 @@
-@import "./utils/variables";
-@import "./base/base";
+@import './utils/variables';
+@import './base/base';
 
-@import "./copmonents/logo";
-@import "./layout/header";
-@import "./layout/hero";
-@import "./layout/features";
-@import "./layout/what-we-do";
-@import "./layout/our-team";
-@import "./layout/customers";
-@import "./layout/footer";
+@import './copmonents/logo';
+@import './copmonents/button';
+@import './layout/header';
+@import './layout/hero';
 
-@import "./layout/portfolio-nav";
-@import "./layout/all";
+@import './copmonents/section';
+@import './layout/features';
 
-@import "./copmonents/modal";
+@import './copmonents/title-section';
+@import './layout/what-we-do';
 
+@import './copmonents/networks';
+@import './layout/our-team';
+@import './layout/customers';
+@import './layout/footer';
 
+@import './layout/portfolio-nav';
+@import './layout/all';
+
+@import './copmonents/modal';

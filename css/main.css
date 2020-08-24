@@ -63,6 +63,22 @@ address {
   color: #ffffff;
 }
 
+.btn {
+  cursor: pointer;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  outline: none;
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
 /* ANCHOR Шапка сайта */
 .page-header .container {
   width: 1200px;
@@ -80,6 +96,16 @@ address {
 .nav {
   display: flex;
   align-items: center;
+}
+
+.nav .item .current::after {
+  content: '';
+  width: auto;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  margin-top: 28px;
+  background-color: #2196f3;
 }
 
 .site .link {
@@ -104,22 +130,12 @@ address {
   fill: #757575;
 }
 
-.nav .item .current::after {
-  content: '';
-  width: auto;
-  height: 4px;
-  border-radius: 2px;
-  display: block;
-  margin-top: 28px;
-  background-color: #2196f3;
+.address-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .link.current {
   padding-bottom: 0px;
-}
-
-.address-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .link.contacts {
@@ -141,9 +157,15 @@ address {
 
 .nav .link:hover,
 .nav .link:focus,
-.nav .link.current,
-.contacts:hover,
-.contacts:focus {
+.nav .link.current {
+  color: #2196f3;
+}
+
+.contacts {
+  color: #757575;
+}
+
+.contacts:hover, .contacts:focus {
   color: #2196f3;
 }
 
@@ -151,10 +173,6 @@ address {
 .contacts:focus .address-icon {
   fill: #2196f3;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts {
-  color: #757575;
 }
 
 /* ANCHOR Герой */
@@ -182,40 +200,18 @@ address {
   text-transform: uppercase;
 }
 
-.btn {
-  cursor: pointer;
-  padding: 10px 32px;
-  border-radius: 4px;
-  min-width: 200px;
-  outline: none;
-  color: #ffffff;
-  background-color: #2196f3;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-}
-
 .btn-order {
   display: flex;
   justify-content: center;
 }
 
-/* ANCHOR Особенности */
 .section {
   padding: 94px 0px;
 }
 
+/* ANCHOR Особенности */
 .feature {
   padding-top: 94px;
-}
-
-.feature .list,
-.section .list {
-  display: flex;
-  justify-content: center;
 }
 
 .feature .item {
@@ -250,11 +246,10 @@ address {
   letter-spacing: 0.03em;
 }
 
-/* ANCHOR Чем мы занимаемся */
-.what-we-do .caption {
-  padding: 27px;
-  color: #ffffff;
-  background-color: rgba(47, 48, 58, 0.8);
+.feature .list,
+.section .list {
+  display: flex;
+  justify-content: center;
 }
 
 .what-we-do .title,
@@ -268,11 +263,18 @@ address {
   letter-spacing: 0.03em;
 }
 
+/* ANCHOR Чем мы занимаемся */
+.what-we-do .caption {
+  padding: 27px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .what-we-do .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.product {
+.what-we-do .product {
   position: relative;
 }
 
@@ -289,31 +291,6 @@ address {
   text-transform: uppercase;
 }
 
-/* ANCHOR Наша команда */
-/* и часть Портфолио Все */
-.our-team .item-member {
-  padding-bottom: 24px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 0px 0px 4px 4px;
-  background-color: #ffffff;
-}
-
-.item-member > .photo {
-  margin-bottom: 30px;
-}
-
-.item-member > .name {
-  margin-bottom: 10px;
-}
-
-.item-member > .occupation {
-  margin-bottom: 16px;
-}
-
-.our-team .item-member:not(:last-child) {
-  margin-right: 30px;
-}
-
 .networks > .item:not(:last-child) {
   margin-right: 10px;
 }
@@ -328,10 +305,6 @@ address {
   cursor: pointer;
 }
 
-.our-team .network-icon {
-  fill: #afb1b8;
-}
-
 .networks > .item:hover .network-icon,
 .networks .link:focus .network-icon {
   fill: #ffffff;
@@ -342,8 +315,42 @@ address {
   background-color: #2196f3;
 }
 
+.networks > .item {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ANCHOR Наша команда */
+/* и часть Портфолио Все */
 .our-team {
   background-color: #f5f4fa;
+}
+
+.our-team .item-member {
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+}
+
+.our-team .item-member:not(:last-child) {
+  margin-right: 30px;
+}
+
+.item-member > .photo {
+  margin-bottom: 30px;
+}
+
+.item-member > .name {
+  margin-bottom: 10px;
+}
+
+.item-member > .occupation {
+  margin-bottom: 16px;
+}
+
+.our-team .network-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .name,
@@ -382,15 +389,6 @@ address {
   line-height: 1.88;
 }
 
-.our-team .network-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* for all section networks-icon  */
-.networks > .item {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* ANCHOR Постоянные клиенты */
 .customers .item {
   width: 170px;
@@ -412,11 +410,6 @@ address {
   border-color: #2196f3;
 }
 
-.customers .logo-icon {
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .customers .item:hover .logo-icon,
 .customers .item:focus .logo-icon {
   fill: #2196f3;
@@ -426,7 +419,16 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.customers .logo-icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ANCHOR Футер */
+.page-footer {
+  background-color: #2f303a;
+}
+
 .page-footer .container {
   width: 1200px;
   margin-left: auto;
@@ -469,47 +471,11 @@ address {
   margin-bottom: 20px;
 }
 
-.page-footer .btn {
-  padding-left: 28px;
-  padding-right: 28px;
-  border-radius: 4px;
-  border-color: transparent;
-  display: flex;
-  align-content: center;
-}
-
-.page-footer .btn > .text {
-  margin-right: 10px;
-}
-
-.btn .icon-send {
-  fill: #ffffff;
-}
-
 .page-footer .form {
   display: flex;
 }
 
-.email {
-  padding-left: 16px;
-  display: inline-block;
-  flex-grow: 1;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.form .email {
-  margin-right: 12px;
-}
-
-.page-footer {
-  background-color: #2f303a;
-}
-
-footer .address,
-.connect,
-.describe {
+footer .address {
   color: #ffffff;
 }
 
@@ -534,18 +500,11 @@ footer .phone {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.email {
-  background-color: #2f303a;
+  color: #ffffff;
 }
 
 .page-footer .networks > .item {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.our-team .network-icon {
-  fill: #afb1b8;
 }
 
 .page-footer .network-icon {
@@ -555,6 +514,37 @@ footer .phone {
 .networks > .item:hover,
 .networks > .item:focus {
   background-color: #2196f3;
+}
+
+.email {
+  padding-left: 16px;
+  display: inline-block;
+  flex-grow: 1;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: #2f303a;
+}
+
+.form .email {
+  margin-right: 12px;
+}
+
+.page-footer .btn {
+  padding-left: 28px;
+  padding-right: 28px;
+  border-radius: 4px;
+  border-color: transparent;
+  display: flex;
+  align-content: center;
+}
+
+.page-footer .btn > .text {
+  margin-right: 10px;
+}
+
+.btn .icon-send {
+  fill: #ffffff;
 }
 
 /* ANCHOR Portfolio page */
@@ -596,8 +586,7 @@ footer .phone {
 
 .filter-nav .filter-btn:hover,
 .filter-nav .filter-btn:focus,
-.filter-nav .filter-btn:active,
-.filter-btn.current {
+.filter-nav .filter-btn:active, .filter-btn.current {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -638,6 +627,10 @@ footer .phone {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
+.list-all .item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .description-container {
   padding: 20px 24px;
 }
@@ -673,10 +666,6 @@ footer .phone {
 
 .list-all .item:hover .details {
   transform: translateY(0px);
-}
-
-.list-all .item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ANCHOR modal form */

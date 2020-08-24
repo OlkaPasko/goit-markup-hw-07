@@ -1,23 +1,22 @@
 /* ANCHOR Герой */
 .hero {
-    height: 600px;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  
-    background-image: linear-gradient($hero-bg, $hero-bg),
-      url(../images/background/header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  .hero-title {
+  height: 600px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: linear-gradient($hero-bg, $hero-bg),
+    url(../images/background/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-title {
     margin-top: 0;
     margin-bottom: 30px;
     color: #ffffff;
-  
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -25,25 +24,9 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  
-  .btn {
-    cursor: pointer;
-    padding: 10px 32px;
-    border-radius: 4px;
-    min-width: 200px;
-    outline: none;
-    color: $btn-text-color;
-    background-color: $accent-color;
-  
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-  }
-  
-  .btn-order {
-    display: flex;
-    justify-content: center;
-  }
+}
+
+.btn-order {
+  display: flex;
+  justify-content: center;
+}

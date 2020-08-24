@@ -1,5 +1,8 @@
 /* ANCHOR Футер */
-.page-footer .container {
+.page-footer {
+  background-color: $footer-bg;
+
+  .container {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -7,127 +10,119 @@
     padding-left: 15px;
     display: flex;
   }
-  
-  .page-footer .address-container {
+
+  .address-container {
     margin-top: 60px;
     margin-right: 69px;
     margin-bottom: 60px;
   }
-  
-  .page-footer .connect-container {
+
+  .connect-container {
     margin-top: 72px;
     margin-right: 94px;
     margin-bottom: 100px;
   }
-  
-  .page-footer .describe-container {
+
+  .describe-container {
     margin-top: 72px;
     margin-bottom: 94px;
     flex-grow: 1;
   }
-  
-  .page-footer .logo {
+
+  .logo {
     margin-bottom: 20px;
   }
-  
-  .page-footer .address,
-  .page-footer .e-mail {
+
+  .address,
+  .e-mail {
     display: inline-block;
     margin-bottom: 9px;
   }
-  
-  .page-footer .connect,
-  .page-footer .describe {
-    margin-bottom: 20px;
-  }
-  
-  .page-footer .btn {
-    padding-left: 28px;
-    padding-right: 28px;
-    border-radius: 4px;
-    border-color: transparent;
-  
-    display: flex;
-    align-content: center;
-  }
-  
-  .page-footer .btn > .text {
-    margin-right: 10px;
-  }
-  
-  .btn .icon-send {
-    fill: $btn-text-color;
-  }
-  
-  .page-footer .form {
-    display: flex;
-  }
-  
-  .email {
-    padding-left: 16px;
-    display: inline-block;
-    flex-grow: 1;
-  
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-  }
-  
-  .form .email {
-    margin-right: 12px;
-  }
-  
-  .page-footer {
-    background-color: $footer-bg;
-  }
-  
-  footer .address,
+
   .connect,
   .describe {
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+  }
+}
+
+footer {
+  .address {
     color: #ffffff;
   }
-  
-  footer .e-mail,
-  footer .phone {
+  .e-mail,
+  .phone {
     color: $footer-contacts-color;
   }
-  
-  footer .address,
-  footer .e-mail,
-  footer .phone {
+  .address,
+  .e-mail,
+  .phone {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration: none;
   }
-  
-  .connect,
-  .describe {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+}
+
+.connect,
+.describe {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.page-footer .networks > .item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-footer .network-icon {
+  fill: $social-icon-accent;
+}
+
+.networks > .item:hover,
+.networks > .item:focus {
+  background-color: $accent-color;
+}
+
+.email {
+  padding-left: 16px;
+  display: inline-block;
+  flex-grow: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: $footer-bg;
+
+  .form & {
+    margin-right: 12px;
   }
-  
-  .email {
-    background-color: $footer-bg;
+}
+
+.btn {
+  .page-footer & {
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: 4px;
+    border-color: transparent;
+
+    display: flex;
+    align-content: center;
   }
-  
-  .page-footer .networks > .item {
-    background-color: rgba(255, 255, 255, 0.1);
+
+  .page-footer & > .text {
+    margin-right: 10px;
   }
-  
-  .our-team .network-icon {
-    fill: $social-icon-color;
+
+  .icon-send {
+    fill: $btn-text-color;
   }
-  
-  .page-footer .network-icon {
-    fill: $social-icon-accent;
-  }
-  
-  .networks > .item:hover,
-  .networks > .item:focus {
-    background-color: $accent-color;
-  }
-  
+}

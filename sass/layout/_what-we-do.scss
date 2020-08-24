@@ -1,42 +1,29 @@
 /* ANCHOR Чем мы занимаемся */
-.what-we-do .caption {
+.what-we-do {
+  .caption {
     padding: 27px;
-  
+
     color: #ffffff;
     background-color: $caption-bg;
   }
-  
-  .what-we-do .title,
-  .our-team .title,
-  .customers .title {
-    margin-bottom: 50px;
-  
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-  }
-  
-  .what-we-do .item:not(:last-child) {
+  .item:not(:last-child) {
     margin-right: 30px;
   }
-  
+
   .product {
     position: relative;
   }
-  
-  .caption {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-  
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-  
+}
+.caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
