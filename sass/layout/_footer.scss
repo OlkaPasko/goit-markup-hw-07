@@ -86,9 +86,11 @@ footer {
   fill: $social-icon-accent;
 }
 
-.networks > .item:hover,
-.networks > .item:focus {
-  background-color: $accent-color;
+.networks > .item {
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .email {
